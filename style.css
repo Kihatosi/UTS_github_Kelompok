@@ -49,6 +49,13 @@ header h1 {
     line-height: 1.15;
 }
 
+.nama-kelompok {
+    margin-bottom: 8px;
+    color: #e2e8f0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 header p {
     max-width: 620px;
     margin: 0 auto;
