@@ -1,0 +1,60 @@
+/* Mengatur font dan margin dasar untuk seluruh halaman */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Mengatur tampilan header bagian atas */
+header {
+    background: #0056b3;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #007bff 3px solid;
+    text-align: center;
+}
+
+/* Mengatur ukuran kotak utama konten */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Memberi jarak dan latar putih untuk setiap bagian section (Profil/Tugas) */
+section {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Membuat tombol untuk link YouTube agar terlihat interaktif */
+.tombol-youtube {
+    display: inline-block;
+    background: #cc0000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Efek saat mouse diarahkan ke tombol YouTube */
+.tombol-youtube:hover {
+    background: #ff0000;
+}
+
+/* Mengatur tampilan footer di bagian bawah */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}
