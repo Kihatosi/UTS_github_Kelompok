@@ -105,28 +105,47 @@ section p {
     color: var(--muted);
 }
 
-ul {
+.kartu-anggota {
     display: grid;
-    gap: 10px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
 }
 
-li {
-    padding: 12px 15px;
-    color: #334155;
-    font-weight: 500;
+.kartu-profil {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    padding: 16px 12px;
     background: #f8fafc;
     border: 1px solid var(--border);
     border-radius: 6px;
+    flex-direction: column;
+    text-align: center;
 }
 
-li::before {
-    margin-right: 8px;
-    color: var(--muted);
-    content: '●';
-    font-size: 0.75em;
+.kartu-profil img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 12px;
+    border: 3px solid #e2e8f0;
+    border-radius: 50%;
+}
+
+.kartu-profil h3 {
+    margin: 0 0 4px;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+}
+
+.kartu-profil a {
+    overflow-wrap: anywhere;
+    color: #2563eb;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+.kartu-profil a:hover {
+    text-decoration: underline;
 }
 
 .tombol-youtube {
@@ -184,6 +203,10 @@ footer p {
     section {
         min-height: auto;
         padding: 24px;
+    }
+
+    .kartu-anggota {
+        grid-template-columns: 1fr;
     }
 }
 
