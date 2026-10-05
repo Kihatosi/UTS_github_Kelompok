@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-    --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --accent: #06b6d4;
-    --text: #172033;
+    --primary: #334155;
+    --primary-dark: #1e293b;
+    --text: #1f2937;
     --muted: #64748b;
-    --surface: rgba(255, 255, 255, 0.92);
-    --border: rgba(255, 255, 255, 0.75);
+    --surface: #ffffff;
+    --border: #e2e8f0;
 }
 
 * {
@@ -25,62 +24,35 @@ body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background:
-        radial-gradient(circle at 8% 12%, rgba(99, 102, 241, 0.2), transparent 28%),
-        radial-gradient(circle at 92% 88%, rgba(6, 182, 212, 0.18), transparent 30%),
-        #f1f5ff;
+    background: #f8fafc;
 }
 
 header {
-    position: relative;
-    overflow: hidden;
-    padding: 72px 24px 84px;
+    padding: 56px 24px 68px;
     color: #fff;
     text-align: center;
-    background: linear-gradient(135deg, #312e81 0%, var(--primary) 52%, #0891b2 100%);
-    box-shadow: 0 12px 30px rgba(49, 46, 129, 0.22);
-}
-
-header::before,
-header::after {
-    position: absolute;
-    display: block;
-    width: 180px;
-    height: 180px;
-    content: '';
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 50%;
-}
-
-header::before {
-    top: -92px;
-    left: 8%;
-}
-
-header::after {
-    right: 6%;
-    bottom: -112px;
+    background: var(--primary-dark);
 }
 
 header h1,
 header p {
-    position: relative;
-    z-index: 1;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 header h1 {
-    margin: 0 auto 12px;
+    margin-top: 0;
+    margin-bottom: 10px;
     max-width: 760px;
     font-size: clamp(2rem, 5vw, 3.4rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
+    font-weight: 700;
     line-height: 1.15;
 }
 
 header p {
     max-width: 620px;
     margin: 0 auto;
-    color: rgba(255, 255, 255, 0.84);
+    color: #cbd5e1;
     font-size: clamp(1rem, 2vw, 1.15rem);
 }
 
@@ -100,15 +72,8 @@ section {
     padding: 30px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 20px;
-    box-shadow: 0 18px 40px rgba(30, 41, 59, 0.1);
-    backdrop-filter: blur(10px);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 24px 46px rgba(30, 41, 59, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
 }
 
 h2 {
@@ -121,11 +86,11 @@ h2 {
 }
 
 h2::before {
-    width: 8px;
-    height: 28px;
+    width: 5px;
+    height: 24px;
     content: '';
-    border-radius: 999px;
-    background: linear-gradient(var(--primary), var(--accent));
+    border-radius: 2px;
+    background: var(--primary);
 }
 
 section p {
@@ -146,13 +111,13 @@ li {
     color: #334155;
     font-weight: 500;
     background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
 }
 
 li::before {
     margin-right: 8px;
-    color: var(--accent);
+    color: var(--muted);
     content: '●';
     font-size: 0.75em;
 }
@@ -166,10 +131,9 @@ li::before {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(220, 38, 38, 0.22);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    background: #475569;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
 .tombol-youtube::before {
@@ -178,13 +142,11 @@ li::before {
 }
 
 .tombol-youtube:hover {
-    filter: brightness(1.08);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(220, 38, 38, 0.3);
+    background: #334155;
 }
 
 .tombol-youtube:focus-visible {
-    outline: 3px solid rgba(6, 182, 212, 0.5);
+    outline: 3px solid rgba(71, 85, 105, 0.35);
     outline-offset: 3px;
 }
 
@@ -223,7 +185,6 @@ footer p {
         scroll-behavior: auto;
     }
 
-    section,
     .tombol-youtube {
         transition: none;
     }
